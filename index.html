@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Liquor Calculator</title>
+    <link rel="stylesheet" href="https://use.typekit.net/cqr2ypt.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+    <nav>
+        <h1 id="logo">
+            theLiquorCalc
+        </h1>
+        <a href="entries.html">All Entries</a>
+    </nav>
+
+    <div class="container">
+        <div class="col-one">
+            <ul id="instructions">
+                <h2>Instructions:</h2>
+                <li>
+                    Select <b>bottle size</b> and <b>product type</b>
+                </li>
+                <li>
+                    Input the <b>age statement</b> (if applicable), <b>product name</b> and <b>acquisition cost</b>
+                </li>
+                <li>
+                    Select <b>"Allocated/specialty item"</b> to add a 15% upcharge
+                </li>
+                <li>
+                    Select <b>"Add garnish charge"</b> to add a $0.50 upcharge to account for garnishes
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-two">
+            <form action="" id="liquor-details">
+
+                <label for="btl-size">Bottle size:</label>
+                <select name="btl-size" id="btl-size">
+                    <option value="750mL">750mL</option>
+                    <option value="1L">1L</option>
+                </select>
+                <br>
+                <label for="type">Product type:</label>
+                <select name="type" id="liquor-type">
+                    <option value="bourbon">Bourbon</option>
+                    <option value="scotch">Scotch</option>
+                    <option value="rye">Rye</option>
+                    <option value="irish">Irish</option>
+                    <option value="american">American</option>
+                    <option value="canadian">Canadian</option>
+                    <option value="asian">Asian</option>
+                    <option value="vodka">Vodka</option>
+                    <option value="gin">Gin</option>
+                    <option value="tequila">Tequila</option>
+                    <option value="rum">Rum</option>
+                </select>
+                <br>
+                <label for="product-name">Product name:</label><br>
+                <input type="text" id="product-name" name="product-name">
+                <br>
+                <label for="age">Age statement (if applicable):</label><br>
+                <input type="number" name="age" id="liquor-age">
+                <br>
+                <label for="acq-cost">Acquisition cost:</label><br>
+                <input type="number" id="acqCost">
+                <br>
+                <input type="checkbox" name="allocation" id="allocation"><label for="allocation">Allocated/specialty item</label>
+                <br>
+                <input type="checkbox" name="garnish" id="garnish"><label for="garnish">Add garnish charge</label>
+                <br>
+                <button id="calcBtn" onclick="displayEntry()" type="button">Calculate</button>
+            </form>
+
+            <div id="output">
+                <div id="entry-output">
+
+                </div>
+                <div id="entryBtns">
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
